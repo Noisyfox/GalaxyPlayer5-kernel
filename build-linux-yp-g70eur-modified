@@ -1,0 +1,8 @@
+#!/bin/sh
+make fox_eur_defconfig
+#get rid of the damn + after the version
+export LOCALVERSION=""
+make -j4
+# adb shell reboot download
+# sleep 5
+# heimdall flash --kernel arch/arm/boot/zImage
